@@ -6,14 +6,21 @@ const tPizzaThinLush = id("tPizzaThinLush");
 const ulNavBar = className("navbar-nav mr-auto");
 
 //
+const ilNavBar = className("nav-item");
+
+//
 tPizzaThin.onclick = function () {
 
     //
     let liTwoPart = document.createElement("li");
     liTwoPart.className = "nav-item";
-    liTwoPart.innerHTML = "<a href=\"#\" class=\"nav-link\" data-toggle=\"modal\" data-target=\"#exampleModal\">2.Выбираем начинку</a>\n";
+    liTwoPart.innerHTML = "<a href=\"#\" class=\"nav-link\" data-toggle=\"modal\" data-target=\"#tapeDough\">2.Выбираем начинку</a>\n";
 
     ulNavBar[0].appendChild(liTwoPart);
+
+    // деактивируем
+    const navItemActive = id("nav-item-active");
+    navItemActive.className = "nav-link disabled";
 
     //
     let infoCard = document.createElement("div");
@@ -33,6 +40,7 @@ tPizzaThin.onclick = function () {
     closeChangeDough.onclick = function () {
         document.body.removeChild(infoCard);
         ulNavBar[0].removeChild(liTwoPart);
+        navItemActive.className = "nav-link active";
     }
 };
 
