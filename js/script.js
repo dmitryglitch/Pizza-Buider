@@ -135,9 +135,14 @@ IngredientListModal[0].onclick = function (item) {
     }
 };
 
-// функция для удаления елемента из html.
+// функция для удаления елемента в html.
 function removeElement(from, element) {
     from.removeChild(element)
+}
+
+// функция для удаления родителя указанного елемента в html
+function removeParentElement(childElement) {
+
 }
 
 // функция для создания элемента в html и добавления в нужный.
