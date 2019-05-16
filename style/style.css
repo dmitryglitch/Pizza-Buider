@@ -1,3 +1,19 @@
-.tPizza{
+.tPizza {
     cursor: pointer;
+}
+.card{
+    margin-top: 2px;
+}
+h5{
+    margin: 0;
+}
+
+.card-ingredient-body {
+    width: 100%;
+    height: fit-content;
+    padding: 1.15rem
+}
+
+.mb-5, .my-5 {
+    margin: 3px 0 0 0 !important;
 }
