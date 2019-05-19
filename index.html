@@ -1,158 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/style.css">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style/style.css">
 
-    <title>Pizza Time!</title>
-</head>
-<body>
+        <title>Pizza Time!</title>
+    </head>
+    <body>
 
-    <!--Навигационный бар-->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-        <a href="#" class="navbar-brand">
-            <img src="https://cdn2.iconfinder.com/data/icons/creative-15/64/pizza-Italian-food-fast-food-512.png"
-                 width="75px"
-                 height="75px">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <!--Навигационный бар-->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <a href="#" class="navbar-brand">
+                <img src="https://cdn2.iconfinder.com/data/icons/creative-15/64/pizza-Italian-food-fast-food-512.png"
+                     width="75px"
+                     height="75px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a href="#" class="nav-link"  data-toggle="modal" data-target="#instruction">Инструкция</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link active" id="nav-item-active" data-toggle="modal" data-target="#exampleModal">1.Выберите тип теста</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link"  data-toggle="modal" data-target="#instruction">Инструкция</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" id="nav-item-active" data-toggle="modal" data-target="#exampleModal">1.Выберите тип теста</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-    <!--Модальное окно выбора типа теста-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Выберите тип теста</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-container">
-                        <div class="row justify-content-space-between">
-                            <div class="col">
-                                <span>Пышное</span>
+        <!--Модальное окно выбора типа теста-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Выберите тип теста</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-container">
+                            <div class="row justify-content-space-between">
+                                <div class="col">
+                                    <span>Пышное</span>
+                                </div>
+                                <div class="col">
+                                    <span id="tPizzaThinLush" class="tPizza" aria-hidden="true" data-dismiss="modal">100р. &#10004;</span>
+                                </div>
                             </div>
-                            <div class="col">
-                                <span id="tPizzaThinLush" class="tPizza" aria-hidden="true" data-dismiss="modal">120р. &#10004;</span>
-                            </div>
-                        </div>
-                        <div class="row justify-content-space-between">
-                            <div class="col">
-                                <span>Тонкое</span>
-                            </div>
-                            <div class="col">
-                                <span id="tPizzaThin" class="tPizza" aria-hidden="true" data-dismiss="modal">120р. &#10004;</span>
+                            <div class="row justify-content-space-between">
+                                <div class="col">
+                                    <span>Тонкое</span>
+                                </div>
+                                <div class="col">
+                                    <span id="tPizzaThin" class="tPizza" aria-hidden="true" data-dismiss="modal">100р. &#10004;</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">Закрыть</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Модальное окно с выбором начинки -->
-    <div class="modal fade bd-example-modal-xl" id="tapeDough" tabindex="-1" role="dialog" aria-labelledby="tapeDoughLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Ингридиенты:</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Колбаса +100р.</a>
-                        <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Овощи +20р.</a>
-                        <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Сыр +50р.</a>
-                        <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Ветчина +120р.</a>
-                        <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Грибы +80р.</a>
-                        <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Зелень +20р.</a>
-                        <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Болгарский перец +60р.</a>
-                        <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Бекон +80р.</a>
-                        <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Лосось +150р.</a>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Закрыть</button>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+
+        <!-- Модальное окно с выбором начинки -->
+        <div class="modal fade bd-example-modal-xl" id="tapeDough" tabindex="-1" role="dialog" aria-labelledby="tapeDoughLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Ингридиенты:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Колбаса +100р.</a>
+                            <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Овощи +20р.</a>
+                            <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Сыр +50р.</a>
+                            <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Ветчина +120р.</a>
+                            <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Грибы +80р.</a>
+                            <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Зелень +20р.</a>
+                            <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Болгарский перец +60р.</a>
+                            <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Бекон +80р.</a>
+                            <a href="#" class="list-group-item list-group-item-action" aria-hidden="true" data-dismiss="modal">Лосось +150р.</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Модальное окно с подтверждением удаления типа теста -->
-    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Вы уверены что хотите удалить выбранный слой теста?</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Вам придется снова выбрать новый слой теста.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" id="closeChangeDough" class="btn btn-secondary" data-dismiss="modal">Да</button>
+        <!-- Модальное окно с подтверждением удаления типа теста -->
+        <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Вы уверены что хотите удалить выбранный слой теста?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Вам придется снова выбрать новый слой теста.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="closeChangeDough" class="btn btn-secondary" data-dismiss="modal">Да</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Модальное окно с инструкцией -->
-    <div class="modal fade" id="instruction" tabindex="-1" role="dialog" aria-labelledby="instructionModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Вы уверены что хотите удалить выбранный слой теста?</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Вам придется снова выбрать новый слой теста.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <!-- Модальное окно с инструкцией -->
+        <div class="modal fade" id="instruction" tabindex="-1" role="dialog" aria-labelledby="instructionModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Вы уверены что хотите удалить выбранный слой теста?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Вам придется снова выбрать новый слой теста.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="js/script.js"></script>
+        <script src="js/script.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-</body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+    </body>
 </html>
