@@ -35,7 +35,7 @@ tPizzaThin.onclick = function () {
         finalPriceElement = createElement(
             "li",
             "nav-item",
-            "<a href=\"#\" class=\"nav-link\" data-toggle=\"modal\" data-target=\"#tapeDough\"><h5>Итог: " +
+            "<a href=\"#\" class=\"nav-link\" data-toggle=\"modal\" data-target=\"#checkoutModal\"><h5>Итог: " +
             " <span class=\"badge badge-secondary currentPrice\">" + finalPrice + "р." + "</span></h5>\n",
             ulNavBar[0]
         );
@@ -187,9 +187,16 @@ document.onclick = function (item) {
     if (item.target.id.indexOf("delete-ingredient") === 0) {
 
         // удаляем сам елемент в html
-        const deleteCurrentIngredientList = id(item.target.id);
-        deleteCurrentIngredientList.parentNode.parentNode.parentNode.parentNode
-            .removeChild(deleteCurrentIngredientList.parentNode.parentNode.parentNode);
+        if (massIngredient.length > 1) {
+            const deleteCurrentIngredientList = id(item.target.id);
+            deleteCurrentIngredientList.parentNode.parentNode.parentNode.parentNode
+                .removeChild(deleteCurrentIngredientList.parentNode.parentNode.parentNode);
+        } else {
+            const deleteCurrentIngredientList = id(item.target.id);
+            deleteCurrentIngredientList.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode
+                .removeChild(deleteCurrentIngredientList.parentNode.parentNode.parentNode.parentNode.parentNode);
+        }
+
 
         // получаем id блока который хотим удалить с помощью регулярного выражения и удаляем в массиве ингредиентов
         let reg = /[+]?\d+/;
