@@ -41,6 +41,13 @@ tPizzaThin.onclick = function () {
         );
     }
 
+    // выставляем итоговую цену в панели навигации
+    finalPrice = 100;
+    massIngredient.forEach(function (item) {
+        finalPrice += parseInt(item.price)
+    });
+    currentPrice[0].innerHTML = finalPrice + "р.";
+
     // делаем карточку с информацией по типу теста и возможностью сменить его.
     let infoCard = createElement(
         "div",
@@ -66,6 +73,14 @@ tPizzaThin.onclick = function () {
         removeElement(ulNavBar[0], liTwoPart);
         if (massIngredient.length === 0) {
             removeElement(ulNavBar[0], finalPriceElement);
+        }else{
+
+            // выставляем итоговую цену в панели навигации
+            finalPrice = 0;
+            massIngredient.forEach(function (item) {
+                finalPrice += parseInt(item.price)
+            });
+            currentPrice[0].innerHTML = finalPrice + "р.";
         }
         navItemActive.className = "nav-link active";
     }
